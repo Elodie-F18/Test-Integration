@@ -1,0 +1,610 @@
+/*****************/
+/***VARIABLES*****/
+/*****************/
+    
+$black: #151515
+$orange: #EE771B
+$orange_bloc_chiffre: #FF772B
+$white: #FFFFFF
+$grey: #F2F5F8
+$green: #B5D343
+$pink: #E5004E
+$pink_hover: #BE0E4A
+$light_brown: #B1AAAA
+$dark_grey: #707070
+$border: #E7E9EB
+
+$largeur_header : 1760px
+$largeur_main : 1443px
+$margin: 0 auto 0 auto
+
+
+
+/*******************/
+/******STYLE********/
+/*******************/
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,img,ol,ul,li,article,aside,footer,header,nav,section
+    margin: 0
+    padding: 0
+    border: 0
+    vertical-align: baseline
+
+ol,ul
+    list-style: none
+
+h1, h2, h3, h4, h5, h6
+    display: block
+
+body
+    color: $black 
+    font-weight: normal
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+
+/**********************/
+/******STRUCTURE*******/
+/**********************/
+
+.widzheader 
+    width: $largeur_header
+    margin: $margin
+
+.widzmain 
+    width: $largeur_main
+    margin: $margin
+
+/*****************/
+/*****HEADER******/
+/*****************/
+
+
+
+.header 
+    background: $grey
+
+.subheader_content, .header_wrapp 
+    display: flex
+    justify-content: space-between
+
+.subheader
+    border-bottom: 1px solid $border
+    padding: 15px 0
+    .subheader_block
+        display: flex 
+        .subheader_tel 
+            background: url('../img/picto_header_tel.png') no-repeat center left
+        .subheader_horaire 
+            background: url('../img/picto_header_horaire.png') no-repeat center left
+        .subheader_actu
+            background: url('../img/picto_header_actu.png') no-repeat center left
+        .subheader_contact 
+            background: url('../img/picto_header_mail.png') no-repeat center left
+            color: $orange
+            margin-right: 0
+        a, p 
+            font-size: 14px 
+            color: $dark_grey
+            font-weight: 700
+            text-transform: uppercase
+            padding-left: 24px
+            margin-right: 45px
+        a 
+            text-decoration: none 
+            &:hover 
+                text-decoration: underline
+
+#header_wrapp-sticky-wrapper 
+    position: relative
+    z-index: 777
+
+.header_wrapp_sticky
+    padding: 15px 0
+    background: $grey
+
+.logo
+    flex: 1
+
+.header_nav
+    display: flex
+    flex: 1
+    ul 
+        display: flex 
+        align-items: center;
+        justify-content: space-between
+        width: 100%
+    a 
+        display: inline-block;
+        color: $black
+        text-decoration: none
+        &:after 
+            content: ''
+            display: block
+            margin: auto
+            height: 1px
+            width: 0
+            margin-top: 5px
+            background: transparent
+            transition: width .5s ease, background-color .5s ease
+        &:hover:after 
+            width: 90%
+            background: $black
+
+
+        
+
+
+/******************/
+/*****FOOTER*******/
+/******************/
+
+footer 
+    margin-top: 50px
+
+.footer_top 
+    background: $orange
+    padding: 30px 0
+
+.footer_top_info, .footer_bottom 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    h3 
+        padding-bottom: 5px
+        font-weight: 400
+
+.footer_contact 
+    h3 
+        font-size: 26px
+    p 
+        color: $white 
+        margin-left: 31px
+    p:first-child 
+        margin-bottom: 12px
+
+.footer_contact_tel 
+    background: url('../img/picto_footer_tel.png') no-repeat center left
+
+.footer_contact_horaire
+    background: url('../img/picto_footer_horaire.png') no-repeat center left
+
+
+.footer_je_suis 
+    display: flex
+    .footer_je_suis_content
+        margin-left: 30px
+    h3 
+        font-size: 20px
+    a 
+        padding-left: 8px
+        color: $white
+        text-decoration: none 
+        &:hover 
+            text-decoration: underline
+
+.footer_bottom 
+    padding: 25px 0
+    a 
+        padding-right: 15px
+        text-decoration: none 
+        color: $light_brown
+        &:hover 
+            text-decoration: underline
+    a:last-child
+        padding-right: 0
+    
+
+
+/********************/
+/*****HOMEPAGE*******/
+/********************/
+
+.homepage_pic_strap
+    background:url('../img/home_pic_chapo.png') no-repeat
+    background-size: cover
+    height: 605px
+    position: relative
+    margin-bottom: 150px
+    .homepage_pic_strap_content
+        position: absolute
+        bottom: 0
+        width: 641px
+        padding: 60px 48px
+        background: $white
+    h1 
+        padding: 5px
+        font-size: 54px
+        font-weight: 400
+    p
+        color: $light_brown
+        line-height: 32px
+    
+.homepage_pic_chapo
+    position: absolute
+    bottom: -153px
+    left: 445px
+
+/**BLOC ACTUALITE**/  
+
+.home_actualites 
+    padding: 65px 0 80px
+
+.home_title 
+    font-size: 36px
+    font-weight: 400
+    padding-bottom: 20px
+    text-align: center
+
+.home_list_col 
+    display: flex 
+    justify-content: space-between
+    flex-wrap: wrap
+
+/**/
+.home_single_list
+    width: 32%
+    .single_list_content
+        background: $white
+        border: 1px solid $grey
+        border-radius: 0 0 10px 10px
+        box-shadow: 0px 3px 6px $grey
+
+.single_list_wizpic
+    background-repeat: no-repeat
+    background-size: cover 
+    background-position: center
+    border-radius: 10px 10px 0 0
+
+/**/
+
+.actu_single_list
+    position: relative
+    transition: all 0.8s
+    .actu_single_list_pic
+        height: 228px;
+    .actu_single_list_content 
+        padding: 15px
+    .actu_single_list_category
+        background: $green
+        color: $white
+        position: absolute
+        top: 10px
+        left: -10px
+        font-size: 14px 
+        padding: 8px 20px
+    .actu_single_list_date 
+        display: block
+        padding-bottom: 8px
+        font-size: 14px 
+        color: $light_brown
+    .actu_single_list_title 
+        font-size: 20px
+        line-height: 23px
+    a 
+        position: absolute 
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+    
+.actu_single_list:hover 
+    margin-top: 15px
+    transition: all 0.8s
+       
+.home_actu_button
+    margin-top: 50px
+    text-align: center
+    .button.psItem 
+        padding: 15px 25px
+        text-transform: uppercase
+        font-weight: 700
+        cursor: pointer
+        color: $white
+        box-sizing: border-box
+        background: $orange
+        background: -webkit-gradient(linear,left top,right top,color-stop(50%,$green),color-stop(50%,$orange))
+        background: linear-gradient(90deg,$green 50%,$orange 0)
+        background-position-x: 0%
+        background-position-y: 0%
+        background-size: auto
+        background-size: 200% 100%
+        background-position: 100% 100%
+        -webkit-transition: all .5s ease
+        transition: all .5s ease
+        text-decoration: none
+        position: relative
+        counter-increment: c
+        
+        &:hover 
+            background-position: 0 100%
+        
+    
+/**BLOC CHIFFRE**/
+
+
+.home_chiffre
+    background: linear-gradient($white 27%, $orange_bloc_chiffre 27%)
+    .home_chiffre_strap 
+        background: $grey
+        border-radius: 11px 
+        aside
+            display: flex 
+            justify-content: space-between
+            flex-wrap: wrap
+            padding: 60px
+        .home_chiffre_single
+            width: 18%
+        .home_single_numb
+            display: block
+            font-size: 36px
+
+.home_chiffre_pic 
+    background-size: 100% auto
+    background-repeat: no-repeat 
+    background-position: center bottom
+    height: 315px
+
+/**BLOC PARTICULIER**/
+
+.home_particulier 
+    padding: 70px 0 120px
+    background: $grey
+
+.particulier_single_list
+    .particulier_single_list_pic
+        position: relative
+        height: 298px
+    .particulier_single_list_category 
+        position: absolute
+        bottom: 0
+        left: -10px
+        background: $green
+        color: $white
+        font-size: 24px
+        padding: 8px 20px;
+    a 
+        display: block
+        padding: 15px 
+        background: url('../img/picto_chevron.png') no-repeat center right 15px
+        border-bottom: 1px solid $border
+        color: $black
+        text-decoration: none
+        transition: all 0.8s
+        &:hover 
+            color: $green
+            background-position: center right 10px
+            transition: all 0.8s
+
+
+/**BLOC PARTENAIRE**/
+
+.home_partenaire 
+    position: relative
+    padding: 80px 0
+
+.home_pic_partenaire
+    position: absolute
+    top: 24px 
+    right: 0
+
+
+.partenaire_single_list
+    position: relative
+    display: flex
+    width: 24% 
+    height: 505px
+    border-radius: 10px
+    .partenaire_single_list_content
+        display: flex
+        justify-content: space-between
+        flex-direction: column 
+        flex: 1 
+        margin: 50px 25px 30px 
+        span:first-child
+            font-size: 26px 
+        a
+            padding: 8px 20px 8px 50px;
+            font-size: 14px 
+            font-weight: 700
+            text-transform: uppercase
+            background: $pink url('../img/picto_plus.png') no-repeat center left 10px
+            text-decoration: none 
+            transition: 0.8s all
+            &:hover 
+                background: $pink_hover url('../img/picto_plus.png') no-repeat center left 10px
+                transition: 0.8s all
+
+.partenaire_single_list_content, a
+    color: $white
+    z-index: 2
+
+.strap_link_in_block_single_overlay 
+    display: block
+    background: $black
+    opacity: 0.20
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+
+
+
+/**BLOC FINANCE PAR**/
+
+.home_finance
+    margin-top: 60px
+    border-top: 1px solid $grey
+    p 
+        text-align: center
+        padding: 60px 0 20px 
+        font-size: 26px
+    aside 
+        display: flex 
+        justify-content: space-around
+        flex-wrap: wrap
+
+
+/*********************/
+/*****RESPONSIVE******/
+/*********************/
+
+#navtop_bt_resp 
+	display: none
+ 
+.menu_burger 
+	padding: 9px 2px
+	background: none
+	border: 0
+	cursor: pointer
+
+.menu_burger_item 
+	display: block
+	width: 30px
+	height: 3px
+	background-color: $black
+	position: relative
+
+.menu_burger_item:before, .menu_burger_item:after 
+	content: ""
+	width: 100%
+	height: 100%
+	background-color: $black
+	position: absolute
+	left: 0
+	z-index: 1
+
+.menu_burger_item:before 
+	top: -8px
+
+.menu_burger_item:after 
+	bottom: -8px
+
+.menu_burger.active .menu_burger_item 
+	background: none
+
+.menu_burger.active .menu_burger_item:before 
+	transform: rotate(45deg) translate(5px, 6px)
+
+.menu_burger.active .menu_burger_item:after 
+	transform: rotate(-45deg) translate(5px,-6px)
+
+  
+
+
+@media screen and (max-width:1790px) 
+    .widzheader 
+        width: auto;
+        margin: 0 20px;
+  
+@media screen and (max-width:1490px) 
+    .widzmain 
+        width: auto;
+        margin: 0 20px;
+
+    .header_nav
+        flex: 3
+
+@media screen and (max-width:980px)
+    .homepage_pic_strap .homepage_pic_strap_content 
+        bottom: -160px
+        width: auto
+    .homepage_pic_chapo, .home_pic_partenaire
+        display: none
+
+    .home_single_list 
+        width: 49%
+        margin-bottom: 30px
+
+    .home_chiffre_pic
+        height: 160px
+
+@media screen and (max-width:880px)
+    #navtop_bt_resp
+        display: block
+        position: absolute
+        top: 35px
+        right: 18px
+
+    .subheader_block 
+        flex-direction: column
+        p, a
+            margin-bottom: 10px
+    
+    .header_wrapp
+        flex-direction: column
+        .header_nav
+            display: none
+            margin-top: 25px
+        ul 
+            flex-direction: column
+        
+    .footer_contact
+        width: 100%
+        margin-bottom: 15px
+
+
+    .home_chiffre .home_chiffre_strap .home_chiffre_single
+        width: 20%
+        & br 
+            display: none
+
+
+@media screen and (max-width:680px)
+
+    .homepage_pic_strap h1
+        font-size: 38px
+
+    .home_title
+        font-size: 30px
+        
+    .home_single_list
+        width: 100%
+
+
+    .home_chiffre .home_chiffre_strap .home_chiffre_single
+        width: 47%
+        margin-bottom: 20px
+    .home_chiffre_pic
+        height: 120px
+
+
+    .home_finance p, .footer_contact h3
+        font-size: 22px
+
+    .footer_je_suis
+        width: 100%
+        &:last-child 
+            margin-top: 15px
+
+    .footer_bottom
+        flex-direction: column
+        text-align: center
+        & a   
+            display: block
+            margin-bottom: 7px
+
+
+@media screen and (max-width:480px)
+
+    .subheader_content
+        a 
+            text-indent: -999999px
+            margin-right: 0 !important
+
+    .all_actu_link 
+        display: block
+
+    .home_chiffre 
+        .home_chiffre_strap 
+            aside
+                padding: 55px 25px 25px;
+            .home_chiffre_single 
+                width: 100%
+                margin-bottom: 30px
+            .home_single_numb
+                font-size: 30px
+
+    .home_finance img 
+        width: 100%
